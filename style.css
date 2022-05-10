@@ -1,0 +1,108 @@
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-grey: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+
+    --font-size: 18px;
+    --font: 'Epilogue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--almost-white);
+    font-family: var(--font);
+    overflow-y: hidden;
+}
+
+/*========NAVIGATION=========*/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 10px;
+    margin: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.logo {
+    margin-right: 40px;
+}
+
+/*===========BODY============*/
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 7vh 10vw;
+}
+
+.text-container {
+    height: 70vh;
+    margin-right: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.logos-container img {
+    margin-right: 50px;
+}
+
+.img-container img {
+    width: 350px;
+}
+
+.heading {
+    font-size: 44px;
+}
+
+/*============BUTTON===============*/
+
+.btn {
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--almost-black);
+    color: white;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+
+
+/*====================FOOTER===================*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
