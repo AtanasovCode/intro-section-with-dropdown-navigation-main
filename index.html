@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
 
 
 </head>
+
 <body>
   <nav>
-    <div class="logo-nav">
+    <div class="logo-container">
       <img src="images/logo.svg" alt="logo icon" class="logo">
+    </div>
+    <div class="expand"><img src="images/icon-menu.svg" alt="menu icon" class="expand-icon"></div>
+    <div class="navigation-items">
       <ul>
         <li>
           <div class="features">
             <span>Features</span>
-            <span id="arrow-features" class="arrow-down"><img src="images/icon-arrow-down.svg" alt="arrow down icon"></span>
+            <span id="arrow-features" class="arrow-down"><img src="images/icon-arrow-down.svg"
+                alt="arrow down icon"></span>
             <div class="dropdown">
               <div>
                 <span><img src="images/icon-todo.svg" alt="icon to do"></span>
@@ -46,7 +53,8 @@
         <li>
           <div class="company">
             <span>Company</span>
-            <span id="arrow-company" class="arrow-down"><img src="images/icon-arrow-down.svg" alt="arrow down icon"></span>
+            <span id="arrow-company" class="arrow-down"><img src="images/icon-arrow-down.svg"
+                alt="arrow down icon"></span>
             <div class="dropdown">
               <div>
                 History
@@ -63,11 +71,11 @@
         <li>Careers</li>
         <li>About</li>
       </ul>
+      <ul>
+        <li>Login</li>
+        <li><span class="register">Register</span></li>
+      </ul>
     </div>
-    <ul>
-      <li>Login</li>
-      <li><span class="register">Register</span></li>
-    </ul>
   </nav>
   <div class="container">
     <div class="text-container">
@@ -75,26 +83,22 @@
         <h1>Make remote work</h1>
       </div>
       <div class="sub-text">
-        Get your team in sync, no matter your location. Streamline processes, 
+        Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
       </div>
       <div class="btn-container">
         <input type="button" class="btn" value="Learn More">
       </div>
       <div class="logos-container">
-        <img src="images/client-databiz.svg" alt="logo collection">
-        <img src="images/client-audiophile.svg" alt="logo collection">
-        <img src="images/client-meet.svg" alt="logo collection">
-        <img src="images/client-maker.svg" alt="logo collection">
+        <img src="images/client-databiz.svg" alt="logo collection" class="client-logo">
+        <img src="images/client-audiophile.svg" alt="logo collection" class="client-logo">
+        <img src="images/client-meet.svg" alt="logo collection" class="client-logo">
+        <img src="images/client-maker.svg" alt="logo collection" class="client-logo">
       </div>
     </div>
     <div class="img-container">
-      <img src="images/image-hero-desktop.png" alt="image hero">
     </div>
-  </div>  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>

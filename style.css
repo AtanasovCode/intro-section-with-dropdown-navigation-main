@@ -17,7 +17,6 @@ body {
     min-height: 100vh;
     background-color: var(--almost-white);
     font-family: var(--font);
-    overflow-y: hidden;
 }
 
 /*========NAVIGATION=========*/
@@ -25,16 +24,33 @@ body {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 10vh;
     padding: 10px;
-    margin: 15px 15px 70px 15px;
+    color: var(--medium-grey);
+    margin: 25px 15px 70px 25px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
+}
+
+.navigation-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expand {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
 }
 
 nav ul {
@@ -53,20 +69,21 @@ nav ul li {
     color: var(--medium-grey);
 }
 
-.logo-nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
+
 
 .logo {
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .register {
-    border: 1px solid black;
+    border: 1px solid var(--medium-grey);
     padding: 10px;
     border-radius: 10px;
+}
+
+.register:hover {
+    color: var(--almost-black);
+    border: 1px solid var(--almost-black);
 }
 
 .features {
@@ -125,8 +142,12 @@ nav ul li {
     margin-right: 50px;
 }
 
-.img-container img {
-    width: 350px;
+.img-container {
+    width: 60vw;
+    height: 60vh;
+    background-image: url(images/image-hero-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .heading {
@@ -140,20 +161,124 @@ nav ul li {
     height: 50px;
     border-radius: 10px;
     background-color: var(--almost-black);
+    border: 1px solid var(--almost-black);
     color: white;
     font-size: 18px;
     font-family: inherit;
     cursor: pointer;
 }
 
-
-
-
-/*====================FOOTER===================*/
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.btn:hover {
+    background-color: var(--almost-white);
+    border: 1px solid var(--almost-black);
+    color: var(--almost-black);
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+
+/*======MOBILE FRIENDLY=========*/
+
+@media only screen and (max-width: 1030px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+    .container {
+        margin: 2vh 2vw;
+    }
+    .heading {
+        font-size: 33px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        position: relative;
+        margin: 0;
+    }
+    .navigation-items {
+        width: 250px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        opacity: 0;
+        margin: 0;
+        z-index: 0;
+        transition: opacity .4s ease-in;
+    }
+    
+    .navigation-items.active {
+        opacity: 1;
+    }
+
+    .dropdown.active {
+        z-index: 1;
+    }
+    .expand {
+        opacity: 1;
+        margin: 15px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    nav ul li {
+        margin-bottom: 50px;
+    }
+    
+    .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    .text-container {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .image-container {
+        width: 60vw;
+        height: 60vh;
+        background-image: url(images/image-hero-mobile.png);
+        background-size:cover;
+    }
+    .heading {
+        font-size: 22px;
+    }
+
+    .logos-container img {
+        margin: 5px;
+    }
+
+    .client-logo {
+        width: 65px;
+    }
 }
