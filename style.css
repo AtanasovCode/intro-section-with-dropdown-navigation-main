@@ -28,7 +28,13 @@ nav {
     justify-content: space-between;
     height: 10vh;
     padding: 10px;
-    margin: 15px;
+    margin: 15px 15px 70px 15px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 nav ul {
@@ -39,7 +45,12 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 30px;
+    margin: 0 40px;
+    cursor: pointer;
+}
+
+.nav ul li:hover {
+    color: var(--medium-grey);
 }
 
 .logo-nav {
@@ -50,6 +61,46 @@ nav ul li {
 
 .logo {
     margin-right: 40px;
+}
+
+.register {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.features {
+    position: relative;
+}
+
+.company {
+    position: relative;
+}
+
+/*========DROPDOWN==================*/
+
+.dropdown{
+    position: absolute;
+    width: 150px;
+    top: 30px;
+    right: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    cursor: default;
+    transition: opacity .4s ease-in;
+}
+
+.dropdown.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.dropdown div{
+    margin: 0 0 10px 0;
 }
 
 /*===========BODY============*/
